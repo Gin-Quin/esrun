@@ -1,4 +1,13 @@
 # esrun
+
+> **⚠️ DEPRECATION NOTICE**
+>
+> This package is being deprecated. We recommend using modern alternatives:
+>
+> - **For new projects:** Use [Bun](https://bun.sh/) instead of Node.js when possible. Bun offers exceptional performance, built-in TypeScript support without any configuration, and can run TypeScript files natively. It's a modern JavaScript runtime that eliminates the need for additional build tools or transpilers.
+>
+> - **For Node.js backends:** When you specifically need Node.js compatibility, use the official and well-maintained [tsx](https://github.com/esbuild-kit/tsx) package, which provides similar functionality with better maintenance and ecosystem support.
+
 **esrun** is a "work out of the box" library to execute Typescript (as well as modern Javascript with decorators and stuff) without having to use a bundler. This is useful for quick demonstrations or when launching your tests written in Typescript.
 
 This library is a thin wrapper around [esbuild](https://github.com/evanw/esbuild) which compiles Typescript almost instantly.
