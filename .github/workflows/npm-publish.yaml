@@ -11,22 +11,22 @@ jobs:
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
       # install dependencies
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: pnpm-cache
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-modules-${{ matrix.node-version }}-${{ hashFiles('**/package.json') }}
       - name: Install dependencies
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@v4
         with:
-          version: 6.30.1
+          version: 9
           run_install: true
 
       # build & test
@@ -39,22 +39,22 @@ jobs:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 20
           registry-url: https://registry.npmjs.org/
 
       # install dependencies
-      - uses: actions/cache@v2
+      - uses: actions/cache@v4
         id: pnpm-cache
         with:
           path: ~/.pnpm-store
           key: ${{ runner.os }}-modules-${{ matrix.node-version }}-${{ hashFiles('**/package.json') }}
       - name: Install dependencies
-        uses: pnpm/action-setup@v2.0.1
+        uses: pnpm/action-setup@v4
         with:
-          version: 6.30.1
+          version: 9
           run_install: true
 
       # setup git config (for auto-version bumping)
