@@ -232,8 +232,8 @@ packages:
     resolution: {integrity: sha512-vbRorB5FUQWvla16U8R/qgaFIya2qGzwDrNmCZuYKrbdSUMG6I1ZCGQRefkRVhuOkIGVne7BQ35DSfo1qvJqFg==}
     engines: {node: '>=0.8.0'}
 
-  esrun@3.2.26:
-    resolution: {integrity: sha512-gDjP87qj4RW0BryZXPY3/L161hPo9uG6luBTjLsuHG3cKnhSMrzB7eNzSzvDyBLg7OgugyvzSgB2ov7mZ/oa7Q==}
+  esrun@3.2.29:
+    resolution: {integrity: sha512-dqs73mWZXngjWbNAKY7SX016NteyzcNeOZSBjGPUzGRVkScLxIBjKBaZm5a8gRNJgMKlE/Gy7BCP3OK3mBJQSg==}
     engines: {node: '>=14.0'}
     hasBin: true
 
@@ -315,7 +315,7 @@ snapshots:
 
   '@digitak/bunker@3.3.9':
     dependencies:
-      esrun: 3.2.26
+      esrun: 3.2.29
 
   '@digitak/grubber@3.1.4': {}
 
@@ -457,7 +457,7 @@ snapshots:
 
   escape-string-regexp@1.0.5: {}
 
-  esrun@3.2.26:
+  esrun@3.2.29:
     dependencies:
       '@digitak/grubber': 3.1.4
       chokidar: 3.6.0
